@@ -1,0 +1,27 @@
+{% extends 'metallioApp/main.html' %}
+
+{% block sidebar %}
+{% include 'metallioApp/sidebar.html' %}
+{%endblock%}
+
+{%block navbar%}
+{% include 'metallioApp/navbar.html' %}
+{%endblock%}
+
+{% block content %}
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          {% if request.user.profile.pembayaran == "BELUM" %}
+          <p class="card-text">kamu belum melakukan pendaftaran, silahkan lakukan pendaftaran</p>
+          <a href="{%url 'Daftar' peserta.id %}" class="btn btn-primary">Daftar Try Out Metallio</a>
+          {% else %}
+          <p class="card-text">Kamu sudah melakukan pendaftaran</p>
+          {%endif%}
+        </div>
+      </div>
+</div>
+{% endblock content %}
+   

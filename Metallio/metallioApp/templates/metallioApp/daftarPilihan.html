@@ -1,0 +1,22 @@
+{% extends 'metallioApp/main.html' %}
+
+
+{% block content %}
+<div class="container">
+    <form class="row g-3" action="" method="POST">
+        {% csrf_token %}
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Pilihan 1</label>
+          {{form1.pilihan}}
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Pilihan 2</label>
+          {{form2.pilihan}}
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+      </form>
+</div>
+{% endblock content %}
+   

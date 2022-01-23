@@ -1,0 +1,42 @@
+{% extends 'metallioApp/main.html' %}
+
+
+{% block content %}
+<div class="container">
+    <form class="row g-3" action="" method="POST">
+        {% csrf_token %}
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Full Name</label>
+          {{form.fullName}}
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Nick Name</label>
+          {{form.nickName}}
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Umur</label>
+          {{form.umur}}
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Asal Sekolah</label>
+          {{form.asal_sekolah}}
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">No. Telepon</label>
+          {{form.no_telepon}}
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Email</label>
+          {{form.email}}  
+        </div>
+        <div class="mb-3">
+          <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+          {{form.bukti_pembayaran}}
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+      </form>
+</div>
+{% endblock content %}
+   
